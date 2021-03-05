@@ -1,0 +1,936 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="imagens/Logo_fav.ico" type="image/x-icon">
+    <title>Luan Bonholli | Desenvolvimento Web</title>
+
+    <script type="text/javascript" src="script.js"></script>
+
+    <script src="https://kit.fontawesome.com/16f8273a49.js" crossorigin="anonymous"></script>
+</head>
+
+<style>
+
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    html, body {
+        height: 100%;
+
+
+
+    }
+
+    html {
+        scroll-behavior: smooth;
+
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0); /*pode ser transparent também*/
+    }
+  
+
+    body {  
+        background-image: url(imagens/fundoP_O.png);
+        background-size: 100% auto;
+        background-repeat: no-repeat ;
+        background-attachment: fixed;
+
+
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+
+        
+    }
+
+    /*FONTES-----------------------------------------------------------------------*/
+
+    @font-face {
+        font-family: Aristotelica;
+        src: url(Fontes/Aristotelica\ Display\ DemiBold\ Trial.ttf);
+    }
+
+    @font-face {
+        font-family: BerlinSans;
+        src: url(Fontes/berlinsans.ttf);
+    }
+
+    @font-face {
+        font-family: Fotastique;
+        src: url(Fontes/fontastique.ttf);
+    }
+
+
+
+    /*/FONTES----------------------------------------------------------------------*/
+
+    header {
+        z-index: 100;
+        background-color: white;
+        width: 100%;
+       
+ 
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        position: fixed;
+
+        box-shadow: 0 0px 1.2em rgba(0, 0, 0, 0.3);
+
+
+
+    }
+
+    header ul {
+        display: flex;
+    }
+
+    header li, a {
+        text-decoration: none;
+        list-style: none;
+    }
+
+    header a {
+        transition: 200ms;
+
+        font-size: 23px;
+        font-weight: bold;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        color: rgb(51, 51, 51);
+    }
+
+    header a:hover {
+        color: #0aafd8;
+
+    }
+
+    header li {
+        margin: 0px 15px 0px 15px;
+        padding: 10px;
+ 
+    }
+
+    /*Logo*/
+    .logo {
+        background-color: rgb(138, 138, 138);
+        color: white;
+        padding: 20px;
+
+
+    }
+    /**/
+
+    .transparente {
+        background-color: #00ccffa4;
+        height: auto;
+
+    }
+    /*--------------------------transparente-------------------------------------*/
+    .transparente {
+        position: relative;
+        padding-top: 90px;
+        display: flex;
+        height: 50%;
+
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .transparente img {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        margin-right: 12%;
+        
+        
+        width: 50%;
+    }
+
+    .transparente h1 {
+        align-items: center;
+        text-align: center;
+        color: white;
+        font-family: 'BerlinSans', sans-serif;
+        margin-left: 12%;
+        font-size: 70px;
+    }
+    /*----------------------------TRANSPARENTE-------------------------------*/
+
+
+
+    .submenu {
+        align-items: center;
+        text-align: center;
+
+        display: block;
+
+        position: absolute;
+
+        background: #0bbeeb;
+
+        top: calc(100% + 23px);
+        margin: 0;
+        left: 50%;
+        transform: translateX(-50%) rotateX(90deg);
+        transform-origin: top center;
+        transition: 200ms ease-in;
+
+        opacity: 0.25;
+        z-index: 3;
+        border-radius: 0px 0px 10px 10px;
+
+  
+
+
+
+ 
+    }
+
+    .submenu a {
+        color: #a3edff;
+        font-size: 18px;
+    }
+
+    .submenu a:hover {
+        color: white;
+    }
+
+    .ctt_a {
+        padding-bottom: 20px;
+        cursor: pointer;
+    }
+
+
+    .ctt_a:hover ~ .submenu {
+        transform: translateX(-50%) rotateX(0);
+        opacity: 1;
+        transition-timing-function: ease-out ;
+    }
+
+    .submenu:hover {
+        transform: translateX(-50%) rotateX(0);
+        opacity: 1;
+        transition-timing-function: ease-out ;
+
+    }
+
+    .ctt:hover {
+  
+    }
+
+    .ctt {
+        position: relative;
+        
+
+    }
+
+    .submenu {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .submenu a {
+    
+        width: 100%;
+    }
+
+    .submenu hr {
+
+        margin: 0px 9px 0px 9px;
+
+        border: solid 1px  rgba(255, 255, 255, 0.500);
+    }
+
+
+    /*CONTEÚDO INICIAL*/
+
+    .conteudo_principal {
+        height: auto;
+        background-color: rgb(248, 248, 248);
+    }
+
+    .nick {
+        padding-top: 90px;
+        padding-bottom: 90px;
+        text-align: center;
+        font-size: 25px;
+
+        line-height: 25px;
+
+        color: #0aafd8;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+
+    dm {
+        font-size: 22.3px;
+        color: rgb(46, 46, 46);
+    }
+
+    .texto1 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+        
+        
+        margin-left: 10%;
+        margin-right: 10%;
+
+        margin-bottom: 70px;
+
+    }
+
+    .imgzinha {
+        margin-right: 20px;
+    }
+    .imgzinha img{
+        width: 520px;
+    }
+
+
+    .texto1 p {
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-size: 20px;
+        
+        margin-left: 20px;
+
+    }
+
+    color {
+        color: #0aafd8;
+        font-weight: bold;
+    }
+
+
+
+
+
+
+    /* Tooltip container */
+    .tooltip {
+        position: relative;
+        display: inline-block;
+        text-align: center;
+        align-items: center;
+
+    }
+
+    /* Tooltip text */
+    .tooltip .tooltiptext {
+        transition: visibility 0ms, opacity 0.2s linear;
+
+        top: 43px;
+
+        left: 0;
+
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-weight: bold;
+
+   
+
+        visibility: hidden;
+        opacity: 0;
+        width: 100%;
+        background-color: #0aafd8;
+        color: #fff;
+        text-align: center;
+        padding: 7px;
+        border-radius: 6px;
+        box-shadow: 3px 3px 9px rgba(0, 0, 0, 0.322);
+        
+        /* Position the tooltip text - see examples below! */
+        position: absolute;
+        z-index: 1;
+    }
+
+    /* Show the tooltip text when you mouse over the tooltip container */
+    .tooltip:hover .tooltiptext {
+        visibility: visible;
+        opacity: 1;
+    }
+
+
+    /*SEGUNDA PARTE*/
+
+
+
+    .p2 {
+        position: relative;
+        margin: 0;
+        background-color: rgb(248, 248, 248);
+        
+    }
+
+    .p2conteudo {
+        text-align: center;
+        height: auto;
+        background-color: #0aafd8;
+    }
+
+    .p2conteudo h3{
+        color: white;
+        font-size: 40px;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        width: auto;
+        margin-left: 37%;
+        margin-right: 37%;
+        background-color: #79ddf7;
+        padding: 10px;
+        border-radius: 10px;
+
+        box-shadow: 12px 12px 0px 0px white;
+
+        
+
+
+        
+       
+
+    }
+
+    .img_p2 {
+        
+        margin-top: 50px;
+        width: 30%;
+    }
+
+    .p2conteudo p {
+        margin-top: 50px;
+        color: #a8eeff;
+        font-size: 30px;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-weight: bold;
+    }
+    
+    .Logo {
+        transition: 300ms;
+    }
+
+    .Logo:hover {
+        -webkit-transform:scale(0.9); 
+            -moz-transform:scale(0.9); 
+                -o-transform:scale(0.9);
+                    transform:scale(0.9);
+    }
+
+    /*de "sobre mim" para baixo*/
+
+
+
+    @keyframes anim {
+
+        0% {
+            transform: translateX();
+
+        }
+
+
+        50% {
+            transform: translateY(30%);
+            
+        }
+
+        100%{
+            transform: translateX();
+
+        }
+
+    }
+
+    /*Botão acesso ao portifólio*/
+
+    .port_acess_btn {
+        border-radius: 1000px;
+
+        border: none;
+
+        box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3);
+
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-weight: bold;
+        font-size: 20px;
+
+        cursor: pointer;
+        outline: none;
+
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        transition: 0.5s;
+
+        
+        
+    }
+
+
+
+    .port_acess_btn:hover {
+
+        transform: translateY(-17px);
+
+        color: #0aafd8;
+
+        
+
+        
+
+    }
+
+    .imgz_p2 {
+        display: none;
+    }
+
+    .menu_mobile, #ativar-menu {
+        display: none;
+    }
+
+    .menu-mobile-btn i{
+        margin-right: 20px;
+        font-size: 47px;
+        color: #0aafd8;
+
+        
+            
+
+    }
+
+    .menu-mobile-btn {
+        display: none;
+    }
+
+    .tapa-tudo {
+        visibility: hidden;
+        transition: 250ms;
+        opacity: 0;
+    }
+
+
+
+    @media screen and (max-width: 905px) {
+
+        header a {
+            font-size: 18px;
+            
+        }
+
+    }
+
+        @media screen and (max-width: 799px) {
+
+            body {
+                text-align: center;
+
+            }
+
+            .texto1{
+                justify-content: center;
+            }
+
+        .menu_mobile, .menu-mobile-btn{
+                display: block;
+        }
+
+        header nav {
+            display: none;
+        }
+
+        .menu_mobile {
+            position: fixed;
+
+            top: 0;
+            z-index: 1000000;
+            width: 75%;
+            height: 100%;
+
+            margin-left: -75%;
+
+            transition: 300ms;
+            
+        }
+
+        .menu_mobile nav {
+            background: #0aafd8;
+            height: 100%;
+            position: relative;
+            
+
+            
+
+        }
+
+        .menu_mobile nav ul {
+            width: 100%;
+          
+            
+            text-align: start;
+         
+        }
+
+        .menu_mobile nav ul a {
+
+            
+            display: block;
+          
+            width: 100%;
+            color: white;
+            font-weight: bold;
+
+
+            font-size: 30px;
+
+            padding: 20px 0;
+        }
+
+        .menu_mobile nav ul a:hover {
+
+            background: rgba(255, 255, 255, 0.336);
+            
+        }
+
+        .menu_mobile nav ul a i {
+            margin-left: 8%;
+        }
+
+        .menu_mobile nav ul a .i_dentro {
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+
+        /*Conteúdo*/
+
+
+
+        .nick img {
+            width: 80%;
+        }
+
+        .texto1 {
+            flex-wrap: wrap;
+        }
+
+
+
+        .imgzinha img{
+            width: 95%;
+        }
+
+        .nick {
+            padding-top: 50px;
+            padding-bottom: 50px;
+        }
+        
+        .texto1 p {
+            font-weight: bold;
+            font-size: 26px;
+
+            margin: 20px 0;
+        }
+
+        .imgz_p1 {
+            display: none;
+        }
+
+        .imgz_p2 {
+            display: block;
+        }
+
+        /*p2*/
+
+        .p2 h3 {
+            font-size: 23px;
+ 
+            margin-top: 20px;
+
+        }
+
+        .p2conteudo p {
+                 
+            font-size: 25px;
+
+         
+            margin-top: 40px;  
+        }
+
+        .p2conteudo {
+            display: flex;
+            flex-wrap: wrap;
+        
+        }
+
+        .p2conteudo .portifólio img{
+
+            width: 100%;
+
+
+
+        }
+
+        .port_acess_btn {
+            display: none;
+        }
+
+        .menu-mobile-btn i{
+            margin-right: 20px;
+            font-size: 47px;
+            color: #0aafd8;
+
+            display: block;
+            
+
+        }
+
+        .menu_mobile ul hr {
+            margin: 0 5%;
+            border: 1px solid #a8eeff;
+        }
+
+        #ativar-menu {
+            display: none;
+        }
+
+        #ativar-menu:checked ~ .menu_mobile {
+            margin-left: 0;
+        }
+        #ativar-menu:checked ~ .tapa-tudo {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        .menu-mobile-quit-btn {
+            
+        }
+
+        .menu-mobile-quit-btn i{
+            color: white;
+            font-size: 47px;
+            margin-right: 0;
+            margin-right: 10px;
+
+            margin-top: 10px;
+            margin-bottom: 10px;
+            
+            
+
+        }
+
+        .menu-mobile-quit-btn i:hover {
+            color: #a8eeff;
+        }
+
+        .mmqb {
+            width: 100%;
+     
+            display: flex;
+            justify-content: flex-end;
+            background: #0987a7;
+
+            
+        }
+
+        .tapa-tudo {
+            display: block;
+            
+        }
+
+        .imgzinha {
+            margin: 0;
+        }
+
+    }
+
+</style>
+
+<body>
+
+    <header class="header">
+
+        <a class="Logo_link" href="index.html" style="align-items: center; display: flex; justify-content: center; padding: 10px; cursor: pointer;"><img class="Logo" src="imagens/LuanLogoCorreta.png" alt="Luan Bonholli logo" style="width: 190px;"></a>
+
+        <nav>
+            <ul>
+                <li class="item"><a href="#parte_dois">Sobre mim</a></li>
+
+                <li class="li_ctt">
+
+                    <div class="ctt">
+                        <a class="ctt_a btn">Contato</a>
+                        <ul class="submenu">
+                            <li class="a_submenu"><a href="">WhatsApp</a></li>
+                            <hr>
+                            <li class="a_submenu"><a href="">Contratar</a></li>
+                            <hr>
+                            <li class="a_submenu"><a href="">Redes<espaço style="opacity: 0;">.</espaço>sociais</a></li>
+                        </ul>
+                    </div>
+
+
+                </li>
+
+                <li class="item"><a href="portifólio.html">Portifólio</a></li>
+                <li class="item">
+                    <div class="item tooltip"><a href="orçamento.html">Orçamento online</a>
+                        <span class="tooltiptext">Fazer um teste para estimar o valor aproximado do site que você quer.</span>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="menu-mobile-btn">
+            <label for="ativar-menu"><i class="fas fa-bars"></i></label>
+            
+        </div>
+
+    </header>
+
+    <div class="transparente">
+        <h1>FRONT<br>END</h1>
+        <img src="imagens/svgs/principal.svg" alt="transparente">
+
+    </div>
+
+    <div class="conteudo_principal" >
+
+        <div class="nick">
+
+            <img src="imagens/LuanLogoCorreta.png" alt="logo">
+        </div>
+
+        <div class="texto1">
+            <div class="imgzinha">
+                <img src="imagens/svgs/montando_colunas.svg" alt="Montando colunas de um site">
+            </div>
+
+            <p>Você descreve, eu faço. Seu site do seu jeito. <br>
+                Tenha um site <color>moderno</color>, <color>bonito</color>, <color>funcional</color> por um <color>preço acessível e justo</color>
+            </p>
+
+
+        </div>
+
+        <br>
+        <br>
+
+        <div class="texto1">
+            <p class="imgz_p1" style="text-align: end;"><color>Responsividade:</color> Seu site adaptado para <color>todos</color> os tamanhos de telas. <br>Sites com <color>máximo desempenho</color> tanto em smartphones/tablets quanto em PC's e telas maiores (Televisões e etc).</p>
+
+            <div class="imgzinha" style="margin-left: 50px;">
+                <img src="imagens/svgs/responsividade.svg" alt="Montando colunas de um site">
+            </div>
+
+            <p class="imgz_p2"><color>Responsividade:</color> Seu site adaptado para <color>todos</color> os tamanhos de telas. <br>Sites com máximo desempenho tanto em um smartphone/tablet quanto em PC's e telas maiores (Televisões e etc).</p>
+
+        </div>
+
+        <br>
+        <br>
+
+        <div class="texto1">
+
+
+            <div class="imgzinha">
+                <img src="imagens/svgs/undraw_dropdown_menu_vv9j.svg" alt="Montando colunas de um site">
+            </div>
+            <p>Você descreve, eu faço. Seu site do seu jeito. <br>
+                Tenha um site <color>moderno</color>, <color>bonito</color>, <color>funcional</color> por um <color>preço acessível e justo.</color>
+            </p>
+
+
+
+
+            
+
+
+        </div>
+
+        <div class="p2">
+        
+            <div class="p2conteudo" id="parte_dois">
+                <img  src="imagens/svgs/ondas/wave (5).svg" alt="onda" style="background-color: rgb(248, 248, 248);">
+                
+                
+                <h3>Sobre mim</h5>
+                <br>
+
+                <p  style="margin-left: 10%; margin-right: 10%; text-align: left;">Olá, eu sou Luan, <span style="color: white">Desenvolvedor web</span> e <span style="color: white">Web Designer</span>. Programo desde meus 13 anos de idade, <span style="color: white">trabalho com as tecnologias mais modernas do mercado</span>, <span style="color: white">cumpro os prazos estipulados</span> e também dou uma força caso o cliente tenha dificuldades com domínio e hospedagem.</p>
+                
+
+
+                <div class="portifólio" style="display: flex; justify-content: center; text-align: center; align-items: center;">
+                    <img src="imagens/svgs/js_html_css.svg" alt="" class="img_p2" style="margin-right: 40px;">
+                    
+                    <button class="port_acess_btn"style="width: 300px; height: 60px;">Acesse meu portifólio</button>
+                </div>
+
+                <hr style="margin: 20px 15%;">
+
+                
+
+                
+            </div>
+
+            <div class="p3conteudo">
+
+
+
+            </div>
+
+
+
+        </div>
+
+
+
+
+
+        
+ 
+
+ 
+
+
+    </div>
+
+    <input type="checkbox" id="ativar-menu">
+
+    <div class="menu_mobile">
+
+
+
+        <nav>
+            <div class="menu-mobile-quit-btn">
+                <div class="mmqb"><label for="ativar-menu"><i class="fas fa-times-circle"></i></label></div>
+            
+            </div>
+
+            <ul>
+                <li><a href=""><i class="fas fa-home"></i><span class="i_dentro"> Início</span></a></li>
+                <hr>
+                <li><a href=""><i class="fas fa-comment-alt"><span class="i_dentro"> Contato</span></i></a></li>
+                <hr>
+                <li><a href=""><i class="fas fa-laptop-code"><span class="i_dentro"> Portifólio</span></i></a></li>
+                <hr>
+                <li><a href="orçamento.html"><i class="fas fa-search-dollar"><span class="i_dentro"> Orçamento online</span></i></a></li>
+            </ul>
+        </nav>
+
+    </div>
+
+    <div class="tapa-tudo" style="position: fixed; background: rgba(0, 0, 0, 0.55); height: 100%; width: 100%; display: block; z-index: 500; top: 0;">
+
+    </div>
+
+
+
+
+
+
+    
+</body>
+</html>

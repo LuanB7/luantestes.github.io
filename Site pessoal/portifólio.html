@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portifólio</title>
+    
+</head>
+
+<style>
+
+    html, body {
+        height: 100%;
+    }
+
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        
+       
+    }
+
+    /*header*/
+    header {
+        z-index: 100;
+        background-color: white;
+        width: 100%;
+       
+ 
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        position: fixed;
+
+        box-shadow: 0 0px 1.2em rgba(0, 0, 0, 0.3);
+
+
+
+    }
+
+    header ul {
+        display: flex;
+    }
+
+    header li, a {
+        text-decoration: none;
+        list-style: none;
+    }
+
+    header a {
+        transition: 200ms;
+
+        font-size: 23px;
+        font-weight: bold;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        color: rgb(51, 51, 51);
+    }
+
+    header a:hover {
+        color: #0aafd8;
+
+    }
+
+    header li {
+        margin: 0px 15px 0px 15px;
+        padding: 10px;
+    }
+ 
+    
+
+    /*submenu*/
+    
+    .submenu {
+        align-items: center;
+        text-align: center;
+
+        display: block;
+
+        position: absolute;
+
+        background: #0bbeeb;
+
+        top: calc(100% + 23px);
+        margin: 0;
+        left: 50%;
+        transform: translateX(-50%) rotateX(90deg);
+        transform-origin: top center;
+        transition: 200ms ease-in;
+
+        opacity: 0.25;
+        z-index: 3;
+        border-radius: 0px 0px 10px 10px;
+
+  
+
+
+
+ 
+    }
+
+    .submenu a {
+        color: #a3edff;
+        font-size: 18px;
+    }
+
+    .submenu a:hover {
+        color: white;
+    }
+
+    .ctt_a {
+        padding-bottom: 20px;
+        cursor: pointer;
+    }
+
+
+    .ctt_a:hover ~ .submenu {
+        transform: translateX(-50%) rotateX(0);
+        opacity: 1;
+        transition-timing-function: ease-out ;
+    }
+
+    .submenu:hover {
+        transform: translateX(-50%) rotateX(0);
+        opacity: 1;
+        transition-timing-function: ease-out ;
+
+    }
+
+    .ctt:hover {
+  
+    }
+
+    .ctt {
+        position: relative;
+        
+
+    }
+
+    .submenu {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .submenu a {
+    
+        width: 100%;
+    }
+
+    .submenu hr {
+
+        margin: 0px 9px 0px 9px;
+
+        border: solid 1px  rgba(255, 255, 255, 0.500);
+    }
+
+     /* Tooltip container */
+     .tooltip {
+        position: relative;
+        display: inline-block;
+        text-align: center;
+        align-items: center;
+
+    }
+
+    /* Tooltip text */
+    .tooltip .tooltiptext {
+        transition: visibility 0ms, opacity 0.2s linear;
+
+        top: 43px;
+
+        left: 0;
+
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-weight: bold;
+
+   
+
+        visibility: hidden;
+        opacity: 0;
+        width: 100%;
+        background-color: #0aafd8;
+        color: #fff;
+        text-align: center;
+        padding: 7px;
+        border-radius: 6px;
+        box-shadow: 3px 3px 9px rgba(0, 0, 0, 0.322);
+        
+        /* Position the tooltip text - see examples below! */
+        position: absolute;
+        z-index: 1;
+    }
+
+    /* Show the tooltip text when you mouse over the tooltip container */
+    .tooltip:hover .tooltiptext {
+        visibility: visible;
+        opacity: 1;
+    }
+
+
+
+    /*======================*/
+
+    /*Logo*/
+    .logo {
+        background-color: rgb(138, 138, 138);
+        color: white;
+        padding: 20px;
+
+
+    }
+    /*=================================*/
+
+    .conteudo {
+
+        display: flex;
+        flex-wrap: wrap;
+        line-height: 0px;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+        height: 100%;
+
+    }
+
+
+    .box {
+        margin-left: 40px;
+        margin-right: 40px;
+        width: 40%;
+        height: 40%;
+        background-image: linear-gradient(to right, #0aafd8, #82dcf3);
+
+        border-radius: 20px
+    }
+</style>
+
+<body>
+
+
+
+    <header class="header">
+
+        <a class="Logo_link" href="index.html" style="align-items: center; display: flex; justify-content: center; padding: 10px; cursor: pointer;"><img class="Logo" src="imagens/LuanLogoCorreta.png" alt="Luan Bonholli logo" style="width: 190px;"></a>
+
+        <nav>
+            <ul>
+                <li class="item"><a href="#parte_dois">Sobre mim</a></li>
+
+                <li class="li_ctt">
+
+                    <div class="ctt">
+                        <a class="ctt_a btn">Contato</a>
+                        <ul class="submenu">
+                            <li class="a_submenu"><a href="">WhatsApp</a></li>
+                            <hr>
+                            <li class="a_submenu"><a href="">Contratar</a></li>
+                            <hr>
+                            <li class="a_submenu"><a href="">Redes<espaço style="opacity: 0;">.</espaço>sociais</a></li>
+                        </ul>
+                    </div>
+
+
+                </li>
+
+                <li class="item"><a href="portifólio.html">Portifólio</a></li>
+                <li class="item">
+                    <div class="item tooltip"><a href="orçamento.html">Orçamento online</a>
+                        <span class="tooltiptext">Fazer um teste para estimar o valor aproximado do site que você quer.</span>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <div class="conteudo">
+
+        <div class="box">
+
+        </div>
+
+        <div class="box">
+
+        </div>
+
+        <div class="box">
+
+        </div>
+
+        <div class="box">
+
+        </div>
+
+    </div>
+    
+</body>
+</html>
